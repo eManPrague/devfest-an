@@ -1,0 +1,40 @@
+<resources>
+
+
+    <string name="keys_completed_header">Keys completed</string>
+    <string name="keys_completed_body">Good job. Now you need to complete
+        a sentence from the collected keys</string>
+
+    <string name="profile_keys_title">Keys /10</string>
+
+
+    <string name="game_finish_message">You have successfully obtained the Agnes code.
+                                        Come to the main stage at 17:00.</string>
+
+    <string name="game_finish_top_ten_message">You have successfully obtained the Agnes code and made
+                                                it to the top ten. Come to the main stage at 17:00
+                                                to collect your reward</string>
+
+    <string name="game_finish_first_message">You have successfully obtained the Agnes code as
+                                                the first one!
+    Save the situation and type in the code below at
+                                                the main stage at 17:00</string>
+
+    <string name="game_finish_first_deactivation">Deactivation code: </string>
+
+    <string name="add_key_duplicate">You already have this key!</string>
+
+
+    <!-- From merge conflict -->
+
+    <string name="key_sorting_header">Make a sentence</string>
+    <string name="key_sorting_message">Complete a sentence from the given words
+        by drag and drop and hit submit at the end.</string>
+
+    <string name="submit_keys_button">SUBMIT</string>
+    <string name="leaderboard_header">Top players</string>
+
+    <string name="game.login.invalid">Invalid Login - problem with authorization service. Please try it again...</string>
+
+
+</resources>

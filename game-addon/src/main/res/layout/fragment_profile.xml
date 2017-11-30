@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/background_color"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <!--<TextView-->
+        <!--android:id="@+id/headerText"-->
+        <!--style="@style/AppTheme.TitleWhite"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="@dimen/fragment_profile_title_text_margin_bottom"-->
+        <!--android:layout_marginTop="@dimen/fragment_profile_title_text_margin_top"-->
+        <!--android:text="@string/profile.text.header"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/fragment_profile_layout_margin_end"
+        android:layout_marginStart="@dimen/fragment_profile_layout_margin_start"
+        android:background="@color/black"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fragment_profile_background_image_margin_bottom"
+            android:layout_marginStart="@dimen/fragment_profile_background_image_margin_start"
+            android:layout_marginTop="@dimen/fragment_profile_background_image_margin_top"
+            android:background="@color/white"
+            android:padding="@dimen/fragment_profile_background_image_padding">
+
+            <ImageView
+                android:id="@+id/profilePicImg"
+                android:layout_width="@dimen/fragment_profile_image_width"
+                android:layout_height="@dimen/fragment_profile_image_height"/>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fragment_profile_inner_layout_margin_bottom"
+            android:layout_marginStart="@dimen/fragment_profile_inner_layout_margin_start"
+            android:layout_marginTop="@dimen/fragment_profile_inner_layout_margin_top"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/fullNameText"
+                style="@style/AppTheme.TextWhiteBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"/>
+
+            <TextView
+                android:id="@+id/positionText"
+                style="@style/AppTheme.TextGreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="@string/user.text.position"/>
+
+            <TextView
+                android:id="@+id/pointsText"
+                style="@style/AppTheme.TextGreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/fragment_profile_points_text_margin_top"
+                android:text="@string/user.text.points"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/profileBottomContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

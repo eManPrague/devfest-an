@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:id="@+id/schedule_single_content"
+    style="@style/MatchWrap"
+    android:padding="@dimen/schedule_card_padding"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/schedule_item_non_session_title"
+        style="@style/Schedule.Item.Text"
+        android:textSize="@dimen/text_size_title"
+        android:textStyle="italic"
+        tools:text="Some title"
+        />
+
+    <TextView
+        android:id="@+id/schedule_item_non_session_subtitle"
+        style="@style/Schedule.Item.Text"
+        android:layout_marginTop="@dimen/base_margin"
+        android:fontFamily="@string/family_light"
+        android:textColor="@color/text_dark_secondary"
+        android:textSize="@dimen/text_size_body"
+        tools:text="This room"
+        />
+</LinearLayout>
+

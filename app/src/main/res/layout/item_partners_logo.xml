@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lv.rigadevday.android.utils.view.SquareFrameLayout
+    android:id="@+id/partners_item_root"
+    style="@style/MatchWrap"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/half_margin"
+    android:clickable="true"
+    android:foreground="@drawable/item_selector_borderless"
+    android:padding="@dimen/half_margin">
+
+    <TextView
+        android:id="@+id/partners_logo_item_name"
+        style="@style/MatchWrap"
+        android:layout_gravity="center"
+        android:fontFamily="@string/family_condensed"
+        android:textColor="@color/text_dark_secondary"
+        android:textSize="@dimen/text_size_caption"
+        />
+
+    <ImageView
+        android:id="@+id/partners_logo_item_image"
+        style="@style/Match"
+        android:layout_gravity="center"
+        tools:background="#4d5"/>
+
+</lv.rigadevday.android.utils.view.SquareFrameLayout>

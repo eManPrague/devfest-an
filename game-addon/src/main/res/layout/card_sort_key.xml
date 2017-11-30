@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:layout_marginStart="@dimen/card_sort_key_layout_margin_start"
+    android:layout_marginEnd="@dimen/card_sort_key_layout_margin_end"
+    android:layout_marginBottom="@dimen/card_sort_key_layout_margin_bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/card_sort_key_layout_padding_start"
+            android:paddingTop="@dimen/card_sort_key_layout_padding_top"
+            android:paddingBottom="@dimen/card_sort_key_layout_padding_bottom">
+
+            <ImageView
+                android:id="@+id/keyImgSort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/card_sort_key_key_image_margin_right"
+                android:layout_marginTop="@dimen/card_sort_key_key_image_margin_top"
+                android:layout_marginBottom="@dimen/card_sort_key_key_image_margin_bottom"
+                android:src="@drawable/profil" />
+
+            <LinearLayout
+                android:layout_width="@dimen/card_sort_key_inner_layout_width"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/keyCodeSort"
+                    style="@style/AppTheme.TextWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/unlockedStringSort"
+                    style="@style/AppTheme.TextGreenBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/keySortImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/card_sort_key_sort_image_margin_end"
+                android:layout_marginStart="@dimen/card_sort_key_sort_image_margin_start"
+                android:src="@drawable/artboard" />
+
+        </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/card_sort_key_view_1_height"
+        android:background="@color/blue_dark"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/card_sort_key_view_2_height"
+        android:background="@color/blue_light"/>
+
+</LinearLayout>

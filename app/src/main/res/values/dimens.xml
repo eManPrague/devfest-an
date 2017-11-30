@@ -1,0 +1,33 @@
+<resources>
+
+    <dimen name="base_margin">8dp</dimen>
+    <dimen name="half_margin">4dp</dimen>
+
+    <dimen name="text_size_headline">24sp</dimen>
+    <dimen name="text_size_title">20sp</dimen>
+    <dimen name="text_size_subheading">16sp</dimen>
+    <dimen name="text_size_body">14sp</dimen>
+    <dimen name="text_size_caption">12sp</dimen>
+
+    <dimen name="elevation_low">2dp</dimen>
+    <dimen name="elevation_medium">4dp</dimen>
+    <dimen name="elevation_high">6dp</dimen>
+
+    <dimen name="speaker_item_padding">8dp</dimen>
+    <dimen name="speaker_content_padding">16dp</dimen>
+    <dimen name="speaker_photo_size">128dp</dimen>
+    <dimen name="speaker_social_button_size">40dp</dimen>
+
+    <dimen name="schedule_card_padding">16dp</dimen>
+    <dimen name="schedule_avatar_size">48dp</dimen>
+    <dimen name="schedule_add_icon_size">48dp</dimen>
+
+    <dimen name="session_card_padding">16dp</dimen>
+    <dimen name="session_avatar_size">64dp</dimen>
+    <dimen name="session_content_padding">16dp</dimen>
+    <dimen name="session_details_header_padding">64dp</dimen>
+    <dimen name="session_details_fab_size">48dp</dimen>
+    <dimen name="session_details_fab_top_margin">-24dp</dimen>
+
+    <dimen name="partners_title_margin_top">24dp</dimen>
+</resources>

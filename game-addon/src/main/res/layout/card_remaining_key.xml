@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/card_remaining_key_layout_margin_start"
+    android:layout_marginEnd="@dimen/card_remaining_key_layout_margin_end"
+    android:layout_marginBottom="@dimen/card_remaining_key_layout_margin_bottom"
+    android:background="@color/black"
+    android:gravity="center_vertical"
+    android:paddingTop="@dimen/card_remaining_key_layout_padding_top"
+    android:paddingBottom="@dimen/card_remaining_key_layout_padding_bottom"
+    android:paddingLeft="@dimen/card_remaining_key_layout_padding_left">
+
+            <ImageView
+                android:id="@+id/keyImg"
+                android:src="@drawable/profil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/companyStandName"
+                style="@style/AppTheme.TextGreenBold"
+                android:layout_marginLeft="@dimen/card_remaining_key_text_margin_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+</LinearLayout>

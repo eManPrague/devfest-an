@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_22">22sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_26">26sp</dimen>
+    <dimen name="text_size_36">36sp</dimen>
+    <dimen name="text_size_56">56sp</dimen>
+
+    <!-- =======Add Key Activity======= -->
+
+    <dimen name="add_key_header_text_margin">12dp</dimen>
+    <dimen name="add_key_input_layout_margin">36dp</dimen>
+    <dimen name="add_key_input_text_margin">20dp</dimen>
+    <dimen name="add_key_react_text_margin">32dp</dimen>
+
+    <dimen name="add_key_input_text_width">60dp</dimen>
+    <dimen name="add_key_input_text_height">80dp</dimen>
+
+    <!-- =======Input Keyboard======= -->
+
+    <dimen name="input_keyboard_padding_bottom">18dp</dimen>
+    <dimen name="input_keyboard_padding_top">16dp</dimen>
+    <dimen name="input_keyboard_button_margin_right">10dp</dimen>
+    <dimen name="input_keyboard_button_margin_bottom">10dp</dimen>
+    <dimen name="input_keyboard_button_height">60dp</dimen>
+    <dimen name="input_keyboard_button_width">50dp</dimen>
+    <dimen name="input_keyboard_clear_button_width">170dp</dimen>
+    <dimen name="input_keyboard_clear_button_height">30dp</dimen>
+
+    <!-- ======= Activity Game ======= -->
+
+    <dimen name="activity_game_viewpager_height">0dp</dimen>
+    <dimen name="activity_game_viewpager_margin">10dp</dimen>
+
+    <!-- ======= Activity Key Sorting ======= -->
+
+    <dimen name="activity_key_sorting_layout_padding_top">12dp</dimen>
+    <dimen name="activity_key_sorting_header_text_margin_bottom">12dp</dimen>
+    <dimen name="activity_key_sorting_body_text_margin_bottom">20dp</dimen>
+    <dimen name="activity_key_sorting_body_text_margin_left">46dp</dimen>
+    <dimen name="activity_key_sorting_body_text_margin_right">46dp</dimen>
+    <dimen name="activity_key_sorting_submit_button_margin_top">20dp</dimen>
+    <dimen name="activity_key_sorting_submit_button_margin_bottom">58dp</dimen>
+
+    <!-- ======= Card Sort Key ======= -->
+
+    <dimen name="card_sort_key_layout_margin_start">18dp</dimen>
+    <dimen name="card_sort_key_layout_margin_end">18dp</dimen>
+    <dimen name="card_sort_key_layout_margin_bottom">8dp</dimen>
+    <dimen name="card_sort_key_layout_padding_start">12dp</dimen>
+    <dimen name="card_sort_key_layout_padding_top">10dp</dimen>
+    <dimen name="card_sort_key_layout_padding_bottom">10dp</dimen>
+    <dimen name="card_sort_key_key_image_margin_right">16dp</dimen>
+    <dimen name="card_sort_key_key_image_margin_bottom">8dp</dimen>
+    <dimen name="card_sort_key_key_image_margin_top">8dp</dimen>
+    <dimen name="card_sort_key_inner_layout_width">0dp</dimen>
+    <dimen name="card_sort_key_sort_image_margin_end">12dp</dimen>
+    <dimen name="card_sort_key_sort_image_margin_start">20dp</dimen>
+    <dimen name="card_sort_key_view_1_height">2dp</dimen>
+    <dimen name="card_sort_key_view_2_height">3dp</dimen>
+
+    <!-- ======= Activity Key Unlocked ======= -->
+
+    <dimen name="activity_key_unlocked_title_margin_top">20dp</dimen>
+    <dimen name="activity_key_unlocked_title_margin_bottom">8dp</dimen>
+    <dimen name="activity_key_unlocked_text_margin_bottom">28dp</dimen>
+    <dimen name="activity_key_unlocked_text_margin_left">40dp</dimen>
+    <dimen name="activity_key_unlocked_text_margin_right">40dp</dimen>
+    <dimen name="activity_key_unlocked_button_margin_top">40dp</dimen>
+
+    <!-- ======= Card Remaining Key ======= -->
+
+    <dimen name="card_remaining_key_layout_padding_top">8dp</dimen>
+    <dimen name="card_remaining_key_layout_padding_bottom">8dp</dimen>
+    <dimen name="card_remaining_key_layout_padding_left">12dp</dimen>
+    <dimen name="card_remaining_key_layout_margin_start">18dp</dimen>
+    <dimen name="card_remaining_key_layout_margin_end">18dp</dimen>
+    <dimen name="card_remaining_key_layout_margin_bottom">6dp</dimen>
+    <dimen name="card_remaining_key_text_margin_left">16dp</dimen>
+
+    <!-- ======= Card Unlocked Key ======= -->
+
+    <dimen name="card_unlocked_key_global_layout_margin_start">18dp</dimen>
+    <dimen name="card_unlocked_key_global_layout_margin_end">18dp</dimen>
+    <dimen name="card_unlocked_key_outer_layout_padding_bottom">10dp</dimen>
+    <dimen name="card_unlocked_key_outer_layout_padding_start">12dp</dimen>
+    <dimen name="card_unlocked_key_outer_layout_padding_top">10dp</dimen>
+    <dimen name="card_unlocked_key_image_margin_right">16dp</dimen>
+    <dimen name="card_unlocked_key_inner_layout_margin_right">16dp</dimen>
+    <dimen name="card_unlocked_key_view_1_height">2dp</dimen>
+    <dimen name="card_unlocked_key_view_2_height">3dp</dimen>
+
+    <!-- ======= Fragment Game Finish ======= -->
+
+    <dimen name="fragment_game_finish_global_layout_padding_top">18dp</dimen>
+    <dimen name="fragment_game_finish_title_text_margin_bottom">10dp</dimen>
+    <dimen name="fragment_game_finish_body_text_margin_bottom">10dp</dimen>
+    <dimen name="fragment_game_finish_invitation_text_margin_bottom">10dp</dimen>
+
+    <!-- ======= Fragment Game Finish TOP 10 ======= -->
+
+    <dimen name="fragment_game_finish_top_ten_global_layout_padding_top">18dp</dimen>
+    <dimen name="fragment_game_finish_top_ten_title_text_margin_bottom">8dp</dimen>
+    <dimen name="fragment_game_finish_top_ten_body_text_margin_bottom">10dp</dimen>
+    <dimen name="fragment_game_finish_top_ten_body_text_margin_left">40dp</dimen>
+    <dimen name="fragment_game_finish_top_ten_body_text_margin_right">40dp</dimen>
+    <dimen name="fragment_game_finish_top_ten_invitation_text_margin_left">40dp</dimen>
+    <dimen name="fragment_game_finish_top_ten_invitation_text_margin_right">40dp</dimen>
+    <dimen name="fragment_game_finish_top_ten_deactivation_layout_padding">16dp</dimen>
+    <dimen name="fragment_game_finish_top_ten_deactivation_layout_margin_top">16dp</dimen>
+    <dimen name="fragment_game_finish_top_ten_deactivation_layout_margin_start">16dp</dimen>
+    <dimen name="fragment_game_finish_top_ten_deactivation_layout_margin_end">16dp</dimen>
+
+    <!-- ======= Fragment Keys Completed ======= -->
+
+    <dimen name="fragment_keys_completed_global_layout_padding_top">18dp</dimen>
+    <dimen name="fragment_keys_completed_title_text_margin_bottom">8dp</dimen>
+    <dimen name="fragment_keys_completed_body_text_margin_bottom">20dp</dimen>
+    <dimen name="fragment_keys_completed_body_text_margin_left">59.5dp</dimen>
+    <dimen name="fragment_keys_completed_body_text_margin_right">59.5dp</dimen>
+
+    <!-- ======= Fragment Leaderboard ======= -->
+
+    <dimen name="fragment_leaderboard_title_text_margin_top">12dp</dimen>
+    <dimen name="fragment_leaderboard_title_text_margin_bottom">4dp</dimen>
+
+
+    <!-- ======= Fragment Profile ======= -->
+
+    <dimen name="fragment_profile_title_text_margin_top">12dp</dimen>
+    <dimen name="fragment_profile_title_text_margin_bottom">4dp</dimen>
+    <dimen name="fragment_profile_layout_margin_start">16dp</dimen>
+    <dimen name="fragment_profile_layout_margin_end">16dp</dimen>
+    <dimen name="fragment_profile_background_image_margin_start">16dp</dimen>
+    <dimen name="fragment_profile_background_image_margin_top">15dp</dimen>
+    <dimen name="fragment_profile_background_image_margin_bottom">15dp</dimen>
+    <dimen name="fragment_profile_background_image_padding">1dp</dimen>
+    <dimen name="fragment_profile_image_height">60dp</dimen>
+    <dimen name="fragment_profile_image_width">60dp</dimen>
+    <dimen name="fragment_profile_inner_layout_margin_top">12dp</dimen>
+    <dimen name="fragment_profile_inner_layout_margin_bottom">12dp</dimen>
+    <dimen name="fragment_profile_inner_layout_margin_start">16dp</dimen>
+    <dimen name="fragment_profile_points_text_margin_top">6dp</dimen>
+    
+    <!-- ======= Fragment Profile Keys======= -->
+    
+    <dimen name="fragment_profile_keys_global_layout_padding_too">18dp</dimen>
+    <dimen name="fragment_profile_keys_title_text_margin_bottom">4dp</dimen>
+    <dimen name="fragment_profile_keys_remaining_text_margin_top">15dp</dimen>
+    <dimen name="fragment_profile_keys_remaining_text_margin_bottom">10dp</dimen>
+
+    <!-- ======= Item Profile ======= -->
+
+    <dimen name="item_profile_global_layout_margin_start">16dp</dimen>
+    <dimen name="item_profile_global_layout_margin_end">16dp</dimen>
+    <dimen name="item_profile_global_layout_margin_bottom">10dp</dimen>
+    <dimen name="item_profile_background_image_margin_top">15dp</dimen>
+    <dimen name="item_profile_background_image_margin_bottom">15dp</dimen>
+    <dimen name="item_profile_background_image_margin_start">16dp</dimen>
+    <dimen name="item_profile_background_image_padding">1dp</dimen>
+    <dimen name="item_profile_image_width">60dp</dimen>
+    <dimen name="item_profile_image_height">60dp</dimen>
+    <dimen name="item_profile_stat_layout_margin_bottom">12dp</dimen>
+    <dimen name="item_profile_stat_layout_margin_start">16dp</dimen>
+    <dimen name="item_profile_stat_layout_margin_top">12dp</dimen>
+    <dimen name="item_profile_points_text_margin_top">6dp</dimen>
+
+
+    <dimen name="text_size_subheading">16sp</dimen>
+
+</resources>

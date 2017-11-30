@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/MatchWrap"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/partners_logo_item_title"
+        style="@style/MatchWrap"
+        android:layout_marginBottom="@dimen/base_margin"
+        android:layout_marginEnd="@dimen/base_margin"
+        android:layout_marginStart="@dimen/base_margin"
+        android:layout_marginTop="@dimen/partners_title_margin_top"
+        android:fontFamily="@string/family_regular"
+        android:padding="@dimen/base_margin"
+        android:textColor="@color/text_dark_primary"
+        android:textSize="@dimen/text_size_headline"
+        android:textStyle="normal"
+        tools:text="Test test test"/>
+
+</LinearLayout>

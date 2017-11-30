@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    style="@style/Schedule.Item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/schedule_time_background"
+    >
+
+    <TextView
+        android:id="@+id/schedule_header_time"
+        style="@style/Schedule.Item.Text.Time"
+        android:layout_marginTop="@dimen/half_margin"
+        android:layout_marginStart="@dimen/base_margin"
+        android:layout_marginEnd="@dimen/base_margin"
+        tools:text="12:40"
+        />
+
+</LinearLayout>

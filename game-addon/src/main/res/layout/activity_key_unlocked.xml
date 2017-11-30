@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <ImageView
+        android:src="@drawable/key_unlocked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="@string/key_part_added.text.title"
+        style="@style/AppTheme.TitleWhite"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/activity_key_unlocked_title_margin_top"
+        android:layout_marginBottom="@dimen/activity_key_unlocked_title_margin_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="@string/key_part_added.text.subtitle"
+        style="@style/AppTheme.TextWhite"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.19"
+        android:layout_marginBottom="@dimen/activity_key_unlocked_text_margin_bottom"
+        android:layout_marginLeft="@dimen/activity_key_unlocked_text_margin_left"
+        android:layout_marginRight="@dimen/activity_key_unlocked_text_margin_right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:id="@+id/unlockedKeyPartContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/continueButton"
+        android:text="@string/key_part_added.button.continue"
+        android:gravity="center"
+        style="@style/AppTheme.Button"
+        android:layout_marginTop="@dimen/activity_key_unlocked_button_margin_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

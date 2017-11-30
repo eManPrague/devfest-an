@@ -1,0 +1,199 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'org.jetbrains.dokka'
+
+android {
+    compileSdkVersion versions.compileSdk
+    buildToolsVersion versions.buildTools
+
+    defaultConfig {
+        applicationId "cz.eman.android.devfest"
+
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+
+        versionCode versions.code // You may want to use BUILD_NUMBER from the Gitlab
+        versionName versions.appVersion
+
+        multiDexEnabled true
+
+        testInstrumentationRunner rootProject.ext.testInstrumentationRunner
+
+        //https://developer.android.com/studio/build/shrink-code.html#unused-alt-resources
+        resConfigs "auto"
+    }
+
+    compileOptions {
+        sourceCompatibility versions.sourceCompatibility
+        targetCompatibility versions.targetCompatibility
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+        //main.java.srcDirs += "${buildDir}/generated/source/kapt/debug"
+        test.java.srcDirs += 'src/test/kotlin'
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("../keystore/debug.keystore")
+            storePassword "android"
+            keyAlias "androiddebugkey"
+            keyPassword "android"
+        }
+
+        release {
+            storeFile file("../keystore/" + signconfig.releaseKeyFile)
+            // release keystore name from gradle.properties
+            storePassword ""
+            keyAlias signconfig.releaseKeyAlias // release key alias from gradle.properties
+            keyPassword ""
+        }
+    }
+    buildTypes {
+        debug {
+            createAllIcons()
+
+            if (project.hasProperty("proguard") && proguard=="true"){
+                minifyEnabled false // TODO enable minify after fixing troubles with firebird proguard
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            }
+
+            if (project.hasProperty("KeystorePass") && project.hasProperty("KeyPass")) {
+                signingConfig signingConfigs.release
+                signingConfigs.release.storePassword = KeystorePass
+                signingConfigs.release.keyPassword = KeystorePass
+            } else {
+                signingConfig signingConfigs.debug
+            }
+        }
+        release {
+            minifyEnabled false // TODO enable minify after fixing troubles with firebird proguard
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            if (project.hasProperty("KeystorePass") && project.hasProperty("KeyPass")) {
+                signingConfig signingConfigs.release
+                signingConfigs.release.storePassword = KeystorePass
+                signingConfigs.release.keyPassword = KeystorePass
+            } else {
+                signingConfig signingConfigs.debug
+            }
+        }
+    }
+}
+
+kapt {
+    generateStubs = true
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile project(':game-addon')
+
+    // Support Libraries
+    implementation supportDependencies.appCompat
+    implementation supportDependencies.designLib
+    implementation supportDependencies.cardView
+    implementation supportDependencies.multidex
+
+    // Kotlin
+    implementation kotlinDependencies.kotlinStbLib
+    implementation kotlinDependencies.ankoSdk15
+
+    // Firebase
+    implementation firebaseDependencies.uiAuth
+    implementation firebaseDependencies.rx2
+    implementation firebaseDependencies.auth
+    implementation firebaseDependencies.database
+    implementation firebaseDependencies.messaging
+    implementation firebaseDependencies.core
+
+    // RX
+    implementation thirdPartyDependencies.rxJava
+    implementation thirdPartyDependencies.rxAndroid
+
+    // Dagger 2
+    kapt thirdPartyDependencies.daggerCompiler
+    implementation thirdPartyDependencies.dagger
+    provided thirdPartyDependencies.javaxAnnotation
+
+    // others
+    implementation thirdPartyDependencies.glide
+    implementation thirdPartyDependencies.glideTransformation
+    implementation thirdPartyDependencies.facebookAnSdk
+    implementation thirdPartyDependencies.kodein
+    implementation thirdPartyDependencies.kodeinAndroid
+    implementation thirdPartyDependencies.kodeinConf
+
+    implementation 'org.zakariya.stickyheaders:stickyheaders:0.7.6'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    compile 'com.google.android.gms:play-services-maps:11.0.4'
+    compile 'com.google.maps.android:android-maps-utils:0.5'
+
+    compile thirdPartyDependencies.stetho
+
+    compile 'net.hockeyapp.android:HockeySDK:3.5.0'
+    // Tests
+    testCompile testDependencies.junit
+
+    androidTestCompile(testDependencies.espressoCore) {
+        exclude module: 'support-annotations'
+    }
+}
+
+dokka {
+    moduleName = 'app'
+    outputFormat = 'html' // html, md, javadoc,
+    outputDirectory = "$buildDir/dokka/html"
+    processConfigurations = ['compile']
+    includes = ['../CHANGELOG.md']
+    //samples = ['samples/basic.kt', 'samples/advanced.kt']
+    linkMapping {
+        dir = "src/main/kotlin"
+        url = "github.com/eManPrague/devfest-an/tree/dev/app/src/main/kotlin"
+        suffix = "#L"
+    }
+    sourceDirs = files('src/main/kotlin')
+}
+
+task dokkaJavadoc(type: org.jetbrains.dokka.gradle.DokkaTask, dependsOn: dokka) {
+    outputFormat = 'javadoc'
+    outputDirectory = "$buildDir/dokka/javadoc"
+    processConfigurations = ['compile']
+    sourceDirs = files('src/main/kotlin')
+}
+
+task androidDokkaJavadocJar(type: Jar, dependsOn: dokkaJavadoc) {
+    classifier = 'kdoc-javadoc'
+    from "$buildDir/dokka/javadoc"
+}
+
+task androidDokkaHtmlJar(type: Jar, dependsOn: dokka) {
+    classifier = 'kdoc-html'
+    from "$buildDir/dokka/html"
+}
+
+task dokkaAll(dependsOn: ['dokka', 'dokkaJavadoc', 'androidDokkaJavadocJar', 'androidDokkaHtmlJar']) {
+    tasks.findByName('dokkaJavadoc').mustRunAfter 'dokka'
+    tasks.findByName('androidDokkaJavadocJar').mustRunAfter 'dokkaJavadoc'
+    tasks.findByName('androidDokkaHtmlJar').mustRunAfter 'dokka'
+}
+
+/**
+ * Generate all sizes of icons with badges
+ */
+void createAllIcons(){
+    createIcon(versions.appVersion,"red","blue","mipmap-hdpi","72")
+    createIcon(versions.appVersion,"red","blue","mipmap-mdpi","48")
+    createIcon(versions.appVersion,"red","blue","mipmap-xhdpi","96")
+    createIcon(versions.appVersion,"red","blue","mipmap-xxhdpi","144")
+    createIcon(versions.appVersion,"red","blue","mipmap-xxxhdpi","192")
+}
+
+apply plugin: 'com.google.gms.google-services'
+repositories {
+    mavenCentral()
+}

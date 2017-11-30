@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/card_unlocked_key_global_layout_margin_end"
+    android:layout_marginStart="@dimen/card_unlocked_key_global_layout_margin_start"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/card_unlocked_key_outer_layout_padding_bottom"
+        android:paddingStart="@dimen/card_unlocked_key_outer_layout_padding_start"
+        android:paddingTop="@dimen/card_unlocked_key_outer_layout_padding_top">
+
+        <ImageView
+            android:id="@+id/keyImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/card_unlocked_key_image_margin_right"
+            android:src="@drawable/profil" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/card_unlocked_key_inner_layout_margin_right"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/keyCode"
+                style="@style/AppTheme.TextWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/unlockedString"
+                style="@style/AppTheme.TextGreenBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/card_unlocked_key_view_1_height"
+        android:background="@color/blue_dark" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/card_unlocked_key_view_2_height"
+        android:background="@color/blue_light" />
+
+</LinearLayout>

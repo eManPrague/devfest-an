@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    style="@style/ScreenBackground"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+
+    <include layout="@layout/part_toolbar"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_fragment_recycler"
+        style="@style/Match"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+</LinearLayout>

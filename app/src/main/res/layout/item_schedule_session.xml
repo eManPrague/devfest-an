@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:clickable="true"
+    android:foreground="@drawable/item_selector">
+<lv.rigadevday.android.ui.schedule.BadgeView
+    android:id="@+id/schedule_badge"
+    android:layout_width="10dp"
+    android:layout_height="match_parent" />
+<RelativeLayout
+    style="@style/MatchWrap"
+    android:focusable="true"
+    >
+
+    <TextView
+        android:id="@+id/schedule_item_title"
+        style="@style/Schedule.Item.Text"
+        android:layout_marginEnd="@dimen/schedule_card_padding"
+        android:layout_marginStart="@dimen/schedule_card_padding"
+        android:layout_marginTop="@dimen/schedule_card_padding"
+        android:textSize="@dimen/text_size_title"
+        tools:text="Some title"
+        />
+
+    <ImageView
+        android:id="@+id/schedule_item_speaker_photo"
+        android:layout_width="@dimen/schedule_avatar_size"
+        android:layout_height="@dimen/schedule_avatar_size"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/schedule_item_title"
+        android:layout_marginEnd="@dimen/schedule_card_padding"
+        android:layout_marginStart="@dimen/schedule_card_padding"
+        android:layout_marginTop="@dimen/base_margin"
+        android:contentDescription="@string/speaker_photo"
+        tools:src="@drawable/vector_speaker_placeholder"
+        />
+
+    <TextView
+        android:id="@+id/schedule_item_room"
+        style="@style/Schedule.Item.Text"
+        android:layout_below="@id/schedule_item_title"
+        android:layout_marginStart="@dimen/schedule_card_padding"
+        android:layout_marginTop="@dimen/base_margin"
+        android:layout_toStartOf="@id/schedule_item_speaker_photo"
+        android:fontFamily="@string/family_light"
+        android:textColor="@color/text_dark_secondary"
+        android:textSize="@dimen/text_size_body"
+        tools:text="Room 3"
+        />
+
+    <TextView
+        android:id="@+id/schedule_item_speaker"
+        style="@style/Schedule.Item.Text"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/schedule_item_room"
+        android:layout_marginBottom="@dimen/base_margin"
+        android:layout_marginEnd="@dimen/schedule_card_padding"
+        android:layout_marginStart="@dimen/schedule_card_padding"
+        android:layout_marginTop="@dimen/base_margin"
+        android:fontFamily="@string/family_light"
+        android:textSize="@dimen/text_size_subheading"
+        android:textStyle="bold"
+        android:textColor="@color/schedule_speaker"
+        android:gravity="center_vertical"
+        tools:text="John Doe"
+        />
+
+    <View
+        android:id="@+id/schedule_item_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/schedule_card_padding"
+        android:layout_marginStart="@dimen/schedule_card_padding"
+        android:background="@color/divider_dark"
+        />
+
+</RelativeLayout>
+</LinearLayout>

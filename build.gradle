@@ -1,0 +1,93 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+apply from: 'dependencies.gradle'
+
+buildscript {
+    // Load dependencies - Gradle cannot handle with external properties inside of buildscript
+    // So we need to apply external file here again
+    apply from: 'dependencies.gradle'
+
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath gradlePlugins.android
+
+        // Kotlin Grade plugin
+        classpath gradlePlugins.kotlin
+
+        // Build Tool to generate Kotlin KDoc documentation
+        classpath gradlePlugins.dokka
+        classpath gradlePlugins.poeditor
+
+        classpath googlePlugins.services
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        google()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = versions.gradle
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+/**
+ * Create Android application icon (ic_launcher.png) with text badge. In case of any error plain icon
+ * (without badge) is created. Create icons only for debug buildType.
+ *
+ * @param text badge text value
+ * @param backgroundColor badge background color (color name  orange/white/blue/etc. or color hexa code #RGBA
+ * @param textColor badge text color
+ * @param folder density folder name (only a single folder for example 'mipmap-xhdpi')
+ * @param iconWidth icon width in pixels as string
+ */
+void createIcon(String text, String backgroundColor, String textColor, String folder, String iconWidth) {
+    try {
+        // resolve convert command
+        String command = "convert"
+        if (isWindows()) {
+            // windows workaround (windows has conflicting convert command, so use our .bat envelope)
+            command = "convert_img.bat"
+        }
+        // check result folder
+        def resultFolder = new File('app/src/debug/res/' + folder);
+        if (!resultFolder.exists()) {
+            resultFolder.mkdirs()
+        }
+        // run imagemagick
+        exec {
+            commandLine command, '-background', backgroundColor, '-fill', textColor, '-size', iconWidth, '-gravity', 'south', 'label:' + text,
+                    'app/src/release/res/' + folder + '/ic_launcher.png', '+swap', '-gravity', 'south', '-composite',
+                    'app/src/debug/res/' + folder + '/ic_launcher.png'
+        }
+    } catch (Exception ex) {
+        println("Could not create icon " + ex.message)
+        ex.printStackTrace()
+        println("If you are running on windows make sure you have convert_img.bat file created and inserted in \$PATH")
+        copy {
+            from 'app/src/release/res/' + folder
+            into 'app/src/debug/res/' + folder
+            include 'ic_launcher.png'
+        }
+    }
+}
+
+/**
+ * @return {@code true} when current OS is windows
+ */
+static boolean isWindows() {
+    return org.gradle.internal.os.OperatingSystem.current().isWindows()
+}

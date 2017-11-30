@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:paddingTop="@dimen/fragment_profile_keys_global_layout_padding_too">
+
+    <TextView
+        android:id="@+id/keyCountText"
+        style="@style/AppTheme.TitleWhite"
+        android:text="@string/profile.text.keys"
+        android:layout_marginBottom="@dimen/fragment_profile_keys_title_text_margin_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/addKeyButton"
+        android:text="@string/profile.button.add_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/AppTheme.Button" />
+
+    <TextView
+        android:text="@string/profile.text.remaining_keys.title"
+        style="@style/AppTheme.TextWhite"
+        android:layout_marginTop="@dimen/fragment_profile_keys_remaining_text_margin_top"
+        android:layout_marginBottom="@dimen/fragment_profile_keys_remaining_text_margin_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/remainingRecyclerView"
+        android:layout_width="match_parent"
+        android:overScrollMode="never"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

@@ -1,0 +1,27 @@
+*.iml
+*.ipr
+*.iws
+
+.gradle
+/local.properties
+.idea/*
+!.idea/copyright
+/build
+/captures
+.externalNativeBuild
+**/build/*
+
+# linux specific files
+.directory
+*.*~
+
+# windows specific files
+Thumbs.db
+thumbs.db
+
+# mac specific files
+.DS_Store
+
+# eMan projects specifics
+/app/src/debug/res/*/ic_launcher.png
+

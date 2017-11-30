@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/rate_background"
+    style="@style/Match"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/dialog_background"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        style="@style/MatchWrap"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/session_content_padding"
+        android:background="@color/screen_background"
+        android:clickable="true"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/rate_session_header"
+            style="@style/MatchWrap"
+            android:background="@color/session_header"
+            android:orientation="vertical"
+            android:padding="@dimen/session_content_padding"
+            >
+
+            <TextView
+                android:id="@+id/rate_session_title"
+                style="@style/Sessions.Text"
+                android:textColor="@color/text_light_primary"
+                android:textSize="@dimen/text_size_subheading"
+                tools:text="Long long title that spans several lines "
+                />
+
+            <TextView
+                android:id="@+id/rate_session_speaker"
+                style="@style/Sessions.Text"
+                android:layout_marginEnd="@dimen/session_details_header_padding"
+                android:layout_marginTop="@dimen/base_margin"
+                android:clickable="true"
+                android:textColor="@color/text_light_primary"
+                android:textSize="@dimen/text_size_caption"
+                tools:text="Speaker Name"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/rate_session_content_header"
+            style="@style/MatchWrap"
+            android:layout_below="@id/rate_session_header"
+            android:fontFamily="@string/family_regular"
+            android:padding="@dimen/session_content_padding"
+            android:text="@string/rate_quality_of_content"
+            android:textColor="@color/text_dark_secondary"
+            android:textSize="@dimen/text_size_subheading"
+            android:textStyle="normal"
+            />
+
+        <RatingBar
+            android:id="@+id/rate_session_content_stars"
+            style="@style/Wrap"
+            android:layout_below="@id/rate_session_content_header"
+            android:layout_centerHorizontal="true"
+            android:max="5"
+            android:numStars="5"
+            android:stepSize="1"
+            android:theme="@style/RddMaterialTheme"
+            />
+
+        <TextView
+            android:id="@+id/rate_session_speaker_header"
+            style="@style/MatchWrap"
+            android:layout_below="@id/rate_session_content_stars"
+            android:layout_marginTop="@dimen/base_margin"
+            android:fontFamily="@string/family_regular"
+            android:padding="@dimen/session_content_padding"
+            android:text="@string/rate_speaker_performance"
+            android:textColor="@color/text_dark_secondary"
+            android:textSize="@dimen/text_size_subheading"
+            android:textStyle="normal"
+            />
+
+        <RatingBar
+            android:id="@+id/rate_session_speaker_stars"
+            style="@style/Wrap"
+            android:layout_below="@id/rate_session_speaker_header"
+            android:layout_centerHorizontal="true"
+            android:max="5"
+            android:numStars="5"
+            android:stepSize="1"
+            android:theme="@style/RddMaterialTheme"
+            />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/rate_session_comment_layout"
+            style="@style/MatchWrap"
+            android:layout_below="@id/rate_session_speaker_stars"
+            android:imeOptions="actionDone"
+            android:padding="@dimen/session_content_padding"
+            android:theme="@style/RddMaterialTheme"
+            app:counterEnabled="true"
+            app:counterMaxLength="300"
+            app:hintAnimationEnabled="true"
+
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/rate_session_comment_input"
+                style="@style/Match"
+                android:hint="@string/rate_your_comment"
+                android:maxLength="300"
+                android:maxLines="3"
+                android:theme="@style/RddMaterialTheme"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/rate_session_submit"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/rate_session_comment_layout"
+            android:background="@drawable/item_selector_borderless"
+            android:paddingEnd="@dimen/base_margin"
+            android:paddingStart="@dimen/base_margin"
+            android:text="@string/rate_submit"
+            android:textColor="@color/color_accent"
+            />
+
+    </RelativeLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_background"
+    android:clickable="true"
+    android:orientation="vertical"
+    >
+<RelativeLayout
+    style="@style/Match"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/MatchWrap"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="?attr/colorPrimary"
+        android:fitsSystemWindows="true"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/ToolbarTheme"
+        >
+
+        <LinearLayout
+            android:id="@+id/session_details_header"
+            style="@style/MatchWrap"
+            android:paddingTop="@dimen/base_margin"
+            android:paddingBottom="@dimen/base_margin"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/session_details_title"
+                style="@style/Sessions.Text"
+                android:textColor="@color/text_light_primary"
+                android:textSize="@dimen/text_size_headline"
+                tools:text="Long long title that spans several lines "
+                />
+
+            <TextView
+                android:id="@+id/session_details_speaker"
+                style="@style/Sessions.Text"
+                android:layout_marginEnd="@dimen/session_details_header_padding"
+                android:layout_marginTop="@dimen/base_margin"
+                android:clickable="true"
+                android:textColor="@color/text_light_primary"
+                android:textSize="@dimen/text_size_body"
+                tools:text="Speaker Name"
+                />
+
+            <TextView
+                android:id="@+id/session_details_tags"
+                style="@style/Sessions.Text"
+                android:layout_marginEnd="@dimen/session_details_header_padding"
+                android:textColor="@color/text_light_secondary"
+                android:textSize="@dimen/text_size_caption"
+                tools:text="All / Android, IoT"
+                />
+
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+    <!--<ImageButton-->
+        <!--android:id="@+id/session_details_bookmark"-->
+        <!--android:layout_width="@dimen/session_details_fab_size"-->
+        <!--android:layout_height="@dimen/session_details_fab_size"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_below="@id/toolbar"-->
+        <!--android:layout_marginEnd="@dimen/session_content_padding"-->
+        <!--android:layout_marginTop="@dimen/session_details_fab_top_margin"-->
+        <!--android:background="@drawable/button_circle"-->
+        <!--android:elevation="8dp"-->
+        <!--android:padding="@dimen/half_margin"-->
+        <!--android:src="@drawable/ic_star"-->
+        <!--android:tint="@color/text_light_primary"-->
+        <!--/>-->
+
+    <ScrollView
+        android:id="@+id/session_details_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/session_login_rate"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="24dp"
+        >
+
+        <TextView
+            android:id="@+id/session_details_description"
+            style="@style/Speakers.Text"
+            android:textIsSelectable="true"
+            android:padding="@dimen/speaker_content_padding"
+            tools:text="Bacon ipsum dolor amet bacon beef pork belly, leberkas biltong bresaola shoulder flank pork chop. Pork capicola t-bone ground round meatloaf fatback. Ham hock kielbasa pork belly, ground round swine brisket cow shank turkey beef pork loin biltong. Bacon ipsum dolor amet bacon beef pork belly, leberkas biltong bresaola shoulder flank pork chop. Pork capicola t-bone ground round meatloaf fatback. Ham hock kielbasa pork belly, ground round swine brisket cow shank turkey beef pork loin biltong. Bacon ipsum dolor amet bacon beef pork belly, leberkas biltong bresaola shoulder flank pork chop. Pork capicola t-bone ground round meatloaf fatback. Ham hock kielbasa pork belly, ground round swine brisket cow shank turkey beef pork loin biltong."
+            />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/session_to_schedule"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/item_selector_borderless"
+        android:paddingEnd="@dimen/session_content_padding"
+        android:paddingStart="@dimen/session_content_padding"
+        android:text="@string/sessions_to_schedule"
+        android:textColor="@color/color_accent"
+        android:visibility="gone"
+        tools:visibility="visible"
+        />
+
+    <Button
+        android:id="@id/session_login_rate"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/base_margin"
+        android:background="@drawable/item_selector_borderless"
+        android:paddingEnd="@dimen/base_margin"
+        android:paddingStart="@dimen/base_margin"
+        android:text="@string/session_login_to_rate"
+        android:textColor="@color/color_accent"
+        />
+
+</RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/session_details_bookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_star_border_white_24dp"
+        android:scaleType="center"
+        app:layout_anchor="@+id/toolbar"
+        app:elevation="8dp"
+        app:fabSize="normal"
+        app:layout_anchorGravity="bottom|right|end"/>
+
+</android.support.design.widget.CoordinatorLayout>

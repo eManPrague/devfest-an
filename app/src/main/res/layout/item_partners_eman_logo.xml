@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/partners_item_root"
+    style="@style/MatchWrap"
+    android:paddingTop="20dp"
+    android:paddingBottom="40dp"
+    android:background="?attr/colorPrimary"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:elevation="10dp"
+    >
+
+    <ImageView
+        android:id="@+id/partners_eman_logo_item_image"
+        style="@style/Match"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_eman_logo_light"
+        />
+
+    <TextView
+        android:id="@+id/partners_logo_item_name"
+        style="@style/MatchWrap"
+        android:gravity="center_horizontal"
+        android:fontFamily="@string/family_condensed"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_subheading"
+        android:text="@string/partners_eman_title"
+        />
+
+</LinearLayout>
+
+

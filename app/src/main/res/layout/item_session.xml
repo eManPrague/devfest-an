@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/session_item_card"
+    style="@style/MatchWrap"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="@drawable/item_selector"
+    >
+
+    <TextView
+        android:id="@+id/session_item_title"
+        style="@style/Sessions.Text"
+        android:layout_marginEnd="@dimen/session_card_padding"
+        android:layout_marginStart="@dimen/session_card_padding"
+        android:layout_marginTop="@dimen/session_card_padding"
+        android:textSize="@dimen/text_size_title"
+        tools:text="Session Title"
+        />
+
+    <ImageView
+        android:id="@+id/session_item_photo"
+        android:layout_width="@dimen/session_avatar_size"
+        android:layout_height="@dimen/session_avatar_size"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/session_item_title"
+        android:layout_marginBottom="@dimen/session_card_padding"
+        android:layout_marginEnd="@dimen/session_card_padding"
+        android:layout_marginStart="@dimen/session_card_padding"
+        android:layout_marginTop="@dimen/base_margin"
+        android:contentDescription="@string/speaker_photo"
+        tools:src="@drawable/vector_speaker_placeholder"
+        />
+
+    <TextView
+        android:id="@+id/session_item_speaker"
+        style="@style/Sessions.Text"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/session_item_title"
+        android:layout_marginStart="@dimen/session_card_padding"
+        android:layout_marginTop="@dimen/base_margin"
+        android:gravity="center_vertical"
+        android:textColor="@color/text_dark_secondary"
+        android:textSize="@dimen/text_size_body"
+        tools:text="John Doe"
+        />
+
+    <TextView
+        android:id="@+id/session_item_tags"
+        style="@style/Sessions.Text"
+        android:layout_below="@id/session_item_speaker"
+        android:layout_marginBottom="@dimen/session_card_padding"
+        android:layout_marginStart="@dimen/session_card_padding"
+        android:layout_marginTop="@dimen/session_card_padding"
+        android:layout_toStartOf="@id/session_item_photo"
+        android:textColor="@color/text_dark_secondary"
+        android:textSize="@dimen/text_size_caption"
+        tools:text="Intermediate / Java, Iot, Android"
+        />
+
+    <View
+        android:id="@+id/session_item_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/session_card_padding"
+        android:layout_marginStart="@dimen/session_card_padding"
+        android:background="@color/divider_dark"
+        />
+
+</RelativeLayout>

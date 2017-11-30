@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Schedule.Item" parent="MatchWrap">
+        <item name="android:paddingStart">@dimen/base_margin</item>
+        <item name="android:paddingEnd">@dimen/base_margin</item>
+        <item name="android:paddingTop">@dimen/half_margin</item>
+        <item name="android:paddingBottom">@dimen/half_margin</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="Schedule.Item.Text.Time" parent="Wrap">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@string/family_condensed</item>
+        <item name="android:textSize">@dimen/text_size_title</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Schedule.Item.Text" parent="MatchWrap">
+        <item name="android:fontFamily">@string/family_regular</item>
+        <item name="android:textColor">@color/text_dark_primary</item>
+        <item name="android:textSize">@dimen/text_size_body</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+</resources>

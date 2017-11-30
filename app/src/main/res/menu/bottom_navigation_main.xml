@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_tab_schedule"
+        android:icon="@drawable/vector_tab_schedule"
+        android:title="@string/tab_schedule"/>
+    <item
+        android:id="@+id/action_tab_speakers"
+        android:checked="true"
+        android:icon="@drawable/vector_tab_speakers"
+        android:title="@string/tab_speakers"/>
+
+    <item
+        android:id="@+id/action_tab_map"
+        android:icon="@drawable/vector_tab_map"
+        android:title="@string/tab_map"/>
+
+    <item
+        android:id="@+id/action_tab_partners"
+        android:icon="@drawable/ic_work_white_24dp"
+        android:title="@string/tab_partners"/>
+
+    <item
+        android:id="@+id/action_tab_game"
+        android:icon="@drawable/ic_action_game_fab"
+        android:title="@string/game.title"/>
+</menu>

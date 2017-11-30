@@ -1,0 +1,28 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="cz.eman.android.devfest.addon.game">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application>
+
+        <activity
+            android:name=".GameActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".function.gameplay.ui.AddKeyActivity"
+            android:parentActivityName=".GameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".function.gameplay.ui.UnlockedKeyActivity"
+            android:parentActivityName=".GameActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".function.gameplay.ui.KeySortingActivity"
+            android:parentActivityName=".GameActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".function.gameplay.service.AddKeyBlockingTimerService" />
+
+    </application>
+
+</manifest>

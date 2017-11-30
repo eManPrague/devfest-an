@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- MARK: Key_Part_Add -->
+    <string name="key_part_add.button.clear">"Clear"</string>
+    <string name="key_part_add.text.header">"Type in the key part"</string>
+
+    <!-- MARK: Leaderboard -->
+    <string name="leaderboard.text.header">"Scoreboard"</string>
+    <string name="profile.text.deactivation_code.title">"Private key:"</string>
+    <string name="profile.text.header">"Save AMOS!"</string>
+
+    <!-- Fuzzy -->
+    <string name="profile.text.leave_game">"Leave"</string>
+    <string name="profile.text.keys">"Key parts"</string>
+
+    <!-- MARK: Profile -->
+    <!-- Fuzzy -->
+    <string name="profile.button.add_key">"Add key part"</string>
+
+    <!-- Fuzzy -->
+    <string name="profile.text.remaining_keys.title">"Find remaining key parts here:"</string>
+
+    <!-- Fuzzy -->
+    <string name="profile.text.collected_keys.title">"All key parts collected!"</string>
+
+    <!-- Fuzzy -->
+    <string name="profile.text.collected_keys.subtitle">"Good job. Now you need to sort them to create a private key."</string>
+
+    <!-- Fuzzy -->
+    <string name="profile.button.collected_keys">"Continue"</string>
+    <string name="profile.text.top10.title">"Good work!"</string>
+
+    <!-- Fuzzy -->
+    <string name="profile.text.completed_keys.title">"Good work!"</string>
+    <string name="profile.text.top10.subtitle">"You have successfully obtained the private key."</string>
+
+    <!-- Fuzzy -->
+    <string name="profile.text.completed_keys.subtitle">"Mission accomplished!"</string>
+    <string name="profile.text.top10.description">"Come to the ending keynote at 18:15 - you might win a prize!"</string>
+
+    <!-- Fuzzy -->
+    <string name="profile.text.completed_keys.description">"Come to see the ending keynote at 18:15"</string>
+    <string name="tabs.button.profile">"Profile"</string>
+
+    <!-- MARK: Tabs -->
+    <string name="tabs.button.leaderboard">"Scoreboard"</string>
+
+    <!-- Created by Stanislav Novacek on 17/08/2017
+      Copyright 2017 eMan s.r.o. All rights reserved.
+
+      Project: DevFest
+
+      37 localizations
+
+     MARK: Create_Key -->
+    <string name="create_key.button.submit">"Submit"</string>
+    <string name="create_key.text.header">"Create private key"</string>
+    <string name="create_key.text.subheader">"Complete a sentence from the
+control words by drag and drop
+and hit submit at the end."</string>
+    <string name="key_part_added.text.title">"Good job!"</string>
+    <string name="key_part_added.text.subtitle">"You have successfully unlocked
+a new part of the private key."</string>
+
+    <!-- MARK: Key_Part_Added -->
+    <string name="key_part_added.button.continue">"Continue"</string>
+
+    <!-- MARK: User -->
+    <string name="user.text.points">"points"</string>
+    <string name="user.text.position">"position"</string>
+
+    <!-- Fuzzy -->
+    <string name="create_key.text.header_wrong">"Wrong order"</string>
+
+    <!-- Fuzzy -->
+    <string name="create_key.text.subheader_wrong">"The order of the key parts is
+incorrect. Try rearanging
+them again."</string>
+    <string name="key_part_add.text.wrong">"Incorrect code, try again in"</string>
+
+    <!-- MARK: General -->
+    <string name="general.buttons.ok">"Ok"</string>
+
+    <!-- MARK: Network -->
+    <!-- Fuzzy -->
+    <string name="network.error.alert_title">"Oops"</string>
+
+    <!-- Fuzzy -->
+    <string name="network.error.no_connection_to_firebase">"It appears the you don't have an internet connection :(
+You need to be online for this operation."</string>
+
+    <!-- MARK: Map -->
+    <string name="map.vc.title">"Map"</string>
+    <string name="key_part_add.text.already_unlocked">"You already have this key part."</string>
+    <string name="game.title">"Game"</string>
+    <string name="key_part_add.text.seconds">"seconds"</string>
+    <string name="key_part_add.timed.out">"Incorrect code, try again in %1$d seconds"</string>
+    <string name="bottom_bar.title.game">"Game"</string>
+    <string name="calendar.permission_denied">"Calendar permission denied"</string>
+    <string name="calendar.change_in_settings">"Change in settings"</string>
+    <string name="calendar.go_to_settings">"Permission settings"</string>
+    <string name="calendar.cancel">"Cancel"</string>
+
+    <string name="general.message.no_network">Please connect to network first...</string>
+
+</resources>

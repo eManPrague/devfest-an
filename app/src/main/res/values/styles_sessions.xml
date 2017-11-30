@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Sessions.Text" parent="MatchWrap">
+        <item name="android:fontFamily">@string/family_regular</item>
+        <item name="android:textColor">@color/text_dark_primary</item>
+        <item name="android:textSize">@dimen/text_size_body</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+</resources>

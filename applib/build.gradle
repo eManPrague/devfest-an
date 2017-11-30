@@ -1,0 +1,112 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'org.jetbrains.dokka'
+
+android {
+    compileSdkVersion versions.compileSdk
+    buildToolsVersion versions.buildTools
+
+    defaultConfig {
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+//        versionCode getGitCommits()
+//        versionName getNexusVersion()
+        versionCode versions.code // You may want to use BUILD_NUMBER from the Gitlab
+        versionName versions.appVersion
+
+        testInstrumentationRunner rootProject.ext.testInstrumentationRunner
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+        test.java.srcDirs += 'src/test/kotlin'
+    }
+
+    compileOptions {
+        sourceCompatibility versions.sourceCompatibility
+        targetCompatibility versions.targetCompatibility
+    }
+}
+
+dokka {
+    moduleName = 'applib'
+    outputFormat = 'html' // html, md, javadoc,
+    outputDirectory = "$buildDir/dokka/html"
+    processConfigurations = ['compile']
+    //includes = ['../CHANGELOG.md']
+    //samples = ['samples/basic.kt', 'samples/advanced.kt']
+    linkMapping {
+        dir = "src/main/kotlin"
+        url = "https://gitlab.eman.cz/android/templates/kotlin-template/tree/dev/app/src/main/kotlin"
+        suffix = "#L"
+    }
+    sourceDirs = files('src/main/kotlin')
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation firebaseDependencies.database
+
+    compile supportDependencies.appCompat
+    compile supportDependencies.designLib
+    compile supportDependencies.v4
+
+    // Kotlin
+    compile kotlinDependencies.kotlinStbLib
+    compile kotlinDependencies.ankoSdk15
+    compile supportDependencies.cardView
+
+    // Dagger 2
+    kapt thirdPartyDependencies.daggerCompiler
+    compile thirdPartyDependencies.dagger
+    provided thirdPartyDependencies.javaxAnnotation
+    compile 'com.github.salomonbrys.kodein:kodein:4.1.0'
+    compile 'com.github.salomonbrys.kodein:kodein-android:4.1.0'
+
+    // Firebase
+    compile firebaseDependencies.uiAuth
+
+    compile thirdPartyDependencies.glide
+
+    // Tests
+    testCompile testDependencies.junit
+    compile 'net.hockeyapp.android:HockeySDK:3.5.0'
+    androidTestCompile(testDependencies.espressoCore) {
+        exclude module: 'support-annotations'
+    }
+}
+
+task dokkaJavadoc(type: org.jetbrains.dokka.gradle.DokkaTask, dependsOn: dokka) {
+    outputFormat = 'javadoc'
+    outputDirectory = "$buildDir/dokka/javadoc"
+    processConfigurations = ['compile']
+    sourceDirs = files('src/main/kotlin')
+}
+
+task androidDokkaJavadocJar(type: Jar, dependsOn: dokkaJavadoc) {
+    classifier = 'kdoc-javadoc'
+    from "$buildDir/dokka/javadoc"
+}
+
+task androidDokkaHtmlJar(type: Jar, dependsOn: dokka) {
+    classifier = 'kdoc-html'
+    from "$buildDir/dokka/html"
+}
+
+task dokkaAll(dependsOn: ['dokka', 'dokkaJavadoc', 'androidDokkaJavadocJar', 'androidDokkaHtmlJar']) {
+    tasks.findByName('dokkaJavadoc').mustRunAfter 'dokka'
+    tasks.findByName('androidDokkaJavadocJar').mustRunAfter 'dokkaJavadoc'
+    tasks.findByName('androidDokkaHtmlJar').mustRunAfter 'dokka'
+}
+repositories {
+    mavenCentral()
+}

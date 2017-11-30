@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Speakers.Item.Text" parent="MatchWrap">
+        <item name="android:fontFamily">@string/family_regular</item>
+        <item name="android:textColor">@color/text_light_primary</item>
+        <item name="android:textSize">@dimen/text_size_title</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="Speakers.Item.Text.Subtitle">
+        <item name="android:textSize">@dimen/text_size_caption</item>
+    </style>
+
+
+    <style name="Speakers.Text" parent="MatchWrap">
+        <item name="android:fontFamily">@string/family_regular</item>
+        <item name="android:textColor">@color/text_dark_primary</item>
+        <item name="android:textSize">@dimen/text_size_body</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingMultiplier">1.3</item>
+    </style>
+
+    <style name="Speakers.Text.Name">
+        <item name="android:fontFamily">@string/family_condensed</item>
+        <item name="android:textColor">@color/text_light_primary</item>
+        <item name="android:textSize">@dimen/text_size_title</item>
+    </style>
+
+    <style name="Speakers.Text.Company">
+        <item name="android:textColor">@color/text_light_primary</item>
+        <item name="android:textSize">@dimen/text_size_caption</item>
+    </style>
+
+
+    <style name="Speakers.Social.Button" parent="Wrap">
+        <item name="android:layout_height">@dimen/speaker_social_button_size</item>
+        <item name="android:layout_width">@dimen/speaker_social_button_size</item>
+        <item name="android:layout_marginEnd">@dimen/half_margin</item>
+        <item name="android:padding">@dimen/half_margin</item>
+        <item name="android:tint">@color/text_light_primary</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/item_selector</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+</resources>

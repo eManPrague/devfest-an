@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/speaker_background"
+    style="@style/Match"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/dialog_background"
+    android:clickable="true"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        style="@style/MatchWrap"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/speaker_content_padding"
+        android:background="@color/screen_background"
+        android:clickable="true"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:id="@+id/speaker_header"
+            style="@style/MatchWrap"
+            android:background="@color/speaker_header"
+            android:padding="@dimen/speaker_content_padding"
+            >
+
+            <ImageView
+                android:id="@+id/speaker_photo"
+                android:layout_width="@dimen/speaker_photo_size"
+                android:layout_height="@dimen/speaker_photo_size"
+                android:layout_marginEnd="@dimen/speaker_content_padding"
+                tools:src="@drawable/vector_speaker_placeholder"
+                />
+
+            <LinearLayout
+                style="@style/MatchWrap"
+                android:layout_alignBottom="@+id/speaker_photo"
+                android:layout_alignTop="@+id/speaker_photo"
+                android:layout_toEndOf="@id/speaker_photo"
+                android:gravity="start|center_vertical"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/speaker_name"
+                    style="@style/Speakers.Text.Name"
+                    tools:text="Antonio Banderas"
+                    />
+
+                <TextView
+                    android:id="@+id/speaker_title"
+                    style="@style/Speakers.Text.Company"
+                    android:layout_marginTop="@dimen/base_margin"
+                    tools:text="Actor"
+                    />
+
+                <TextView
+                    android:id="@+id/speaker_company"
+                    style="@style/Speakers.Text.Company"
+                    tools:text="at Hollywood"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/speaker_social_icons"
+                style="@style/MatchWrap"
+                android:layout_height="@dimen/speaker_social_button_size"
+                android:layout_below="@id/speaker_photo"
+                android:layout_marginStart="-4dp"
+                android:layout_marginTop="@dimen/base_margin"
+                >
+
+                <ImageView
+                    android:id="@+id/speaker_social_blog"
+                    style="@style/Speakers.Social.Button"
+                    android:src="@drawable/vector_button_blog"
+                    tools:visibility="visible"
+                    />
+
+                <ImageView
+                    android:id="@+id/speaker_social_twitter"
+                    style="@style/Speakers.Social.Button"
+                    android:src="@drawable/vector_button_twitter"
+                    tools:visibility="visible"
+                    />
+
+                <ImageView
+                    android:id="@+id/speaker_social_linkedin"
+                    style="@style/Speakers.Social.Button"
+                    android:src="@drawable/vector_button_linkedin"
+                    tools:visibility="visible"
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/speaker_bio_block"
+            style="@style/MatchWrap"
+            android:layout_below="@id/speaker_header"
+            >
+
+            <TextView
+                android:id="@+id/speaker_bio"
+                style="@style/Speakers.Text"
+                android:padding="@dimen/speaker_content_padding"
+                android:textIsSelectable="true"
+                tools:text="Bacon ipsum dolor amet bacon beef pork belly, leberkas biltong bresaola shoulder flank pork chop. Pork capicola t-bone ground round meatloaf fatback. Ham hock kielbasa pork belly, ground round swine brisket cow shank turkey beef pork loin biltong."
+                />
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</FrameLayout>

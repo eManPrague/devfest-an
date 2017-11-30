@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">DevFest CZ</string>
+
+    <string name="hashtag" translatable="false">#DevFestCZ</string>
+
+    <string name="action_twitter">Tweet at us</string>
+    <string name="action_login">Log in</string>
+    <string name="action_logout">Log out</string>
+    <string name="action_licences">About &amp; Licences</string>
+
+    <string name="tab_schedule">Schedule</string>
+    <string name="tab_speakers">Speakers</string>
+    <string name="tab_partners">Partners</string>
+    <string name="tab_map">Map</string>
+
+    <string name="close_dialog">Hide</string>
+
+    <string name="speaker_company">at %s</string>
+
+    <string name="schedule_title">My schedule</string>
+    <string name="schedule_add">Tap to choose session</string>
+    <string name="schedule_change">Long tap to change it later</string>
+
+    <string name="sessions_title">All sessions</string>
+    <string name="sessions_filter">Filter sessions</string>
+    <string name="sessions_filter_title">Filter by tag</string>
+    <string name="sessions_filter_clear">Clear filter</string>
+    <string name="schedule_filter_bookmarked">Bookmarked</string>
+    <string name="sessions_bookmark_saved">Bookmark saved</string>
+    <string name="sessions_to_schedule">To schedule</string>
+    <string name="session_login_to_rate">Login to rate</string>
+    <string name="session_rate">Rate session</string>
+    <string name="session_rate_disabled">Session feedback is available only during the conference</string>
+    <string name="session_cancelled">This session has been cancelled</string>
+
+    <string name="rate_quality_of_content">Quality of content</string>
+    <string name="rate_speaker_performance">Speaker performance:</string>
+    <string name="rate_your_comment">Your comment</string>
+    <string name="rate_submit">Submit</string>
+
+    <string name="licenses_title">Licenses</string>
+
+    <string name="partners_title">Partners</string>
+
+    <string name="auth_login_success">Login successful</string>
+    <string name="auth_login_failed">Login failed</string>
+    <string name="auth_logout_happened">Logged out</string>
+
+    <string name="error_message">Oops, something went wrong</string>
+    <string name="error_connection_message">Please connect to network to download data</string>
+
+    <string name="data_updated">Just got latest updates!</string>
+    <string name="speaker_photo">Speaker\'s photo</string>
+    <string name="rate_label_thank">Thanks for your rating!</string>
+</resources>

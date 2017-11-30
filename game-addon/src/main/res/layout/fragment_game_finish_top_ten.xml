@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/fragment_game_finish_top_ten_global_layout_padding_top">
+
+    <LinearLayout
+        android:id="@+id/mainContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            style="@style/AppTheme.TitleWhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fragment_game_finish_top_ten_title_text_margin_bottom"
+            android:gravity="center"
+            android:text="@string/profile.text.top10.title"/>
+
+        <TextView
+            style="@style/AppTheme.TextWhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fragment_game_finish_top_ten_body_text_margin_bottom"
+            android:layout_marginLeft="@dimen/fragment_game_finish_top_ten_body_text_margin_left"
+            android:layout_marginRight="@dimen/fragment_game_finish_top_ten_body_text_margin_right"
+            android:gravity="center"
+            android:text="@string/profile.text.top10.subtitle"/>
+
+        <TextView
+            style="@style/AppTheme.TextWhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fragment_game_finish_top_ten_invitation_text_margin_left"
+            android:layout_marginRight="@dimen/fragment_game_finish_top_ten_invitation_text_margin_right"
+            android:gravity="center"
+            android:text="@string/profile.text.top10.description"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fragment_game_finish_top_ten_deactivation_layout_margin_end"
+            android:layout_marginStart="@dimen/fragment_game_finish_top_ten_deactivation_layout_margin_start"
+            android:layout_marginTop="@dimen/fragment_game_finish_top_ten_deactivation_layout_margin_top"
+            android:background="@color/black"
+            android:orientation="vertical"
+            android:padding="@dimen/fragment_game_finish_top_ten_deactivation_layout_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/profile.text.deactivation_code.title"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/deactivationCodeText"
+                style="@style/AppTheme.TitleGreenBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <!--<TextView-->
+        <!--android:id="@+id/partners_logo_item_name"-->
+        <!--style="@style/MatchWrap"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:fontFamily="@string/family_condensed"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="@dimen/text_size_subheading"-->
+        <!--android:text="@string/partners_eman_title"-->
+        <!--/>-->
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/partners_eman_logo_item_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainContent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="44dp"
+        android:src="@drawable/ic_eman_logo_pixel"
+        />
+
+    <TextView
+        android:id="@+id/partners_logo_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/partners_eman_logo_item_image"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="@string/partners_eman_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_subheading"
+        />
+
+</RelativeLayout>

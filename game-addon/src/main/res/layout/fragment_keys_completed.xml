@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:paddingTop="@dimen/fragment_keys_completed_global_layout_padding_top">
+
+    <TextView
+        android:text="@string/profile.text.collected_keys.title"
+        style="@style/AppTheme.TitleWhite"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/fragment_keys_completed_title_text_margin_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="@string/profile.text.collected_keys.subtitle"
+        style="@style/AppTheme.TextWhite"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/fragment_keys_completed_body_text_margin_bottom"
+        android:layout_marginRight="@dimen/fragment_keys_completed_body_text_margin_right"
+        android:layout_marginLeft="@dimen/fragment_keys_completed_body_text_margin_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/keysCompletedButton"
+        style="@style/AppTheme.Button"
+        android:text="@string/profile.button.collected_keys"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

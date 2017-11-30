@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_drawer_layout"
+    style="@style/Match"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/part_toolbar" />
+
+    <WebView
+        android:id="@+id/licences_webview"
+        style="@style/Match"
+        tools:background="#a5f4" />
+
+</LinearLayout>

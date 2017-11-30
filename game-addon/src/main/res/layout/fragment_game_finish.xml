@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:paddingTop="@dimen/fragment_game_finish_global_layout_padding_top">
+
+    <TextView
+        android:text="@string/profile.text.completed_keys.title"
+        style="@style/AppTheme.TitleWhite"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fragment_game_finish_title_text_margin_bottom"/>
+
+    <TextView
+        android:text="@string/profile.text.completed_keys.subtitle"
+        style="@style/AppTheme.TextWhite"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fragment_game_finish_body_text_margin_bottom"/>
+
+    <TextView
+        android:text="@string/profile.text.top10.description"
+        style="@style/AppTheme.TextWhite"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fragment_game_finish_invitation_text_margin_bottom"/>
+
+</LinearLayout>

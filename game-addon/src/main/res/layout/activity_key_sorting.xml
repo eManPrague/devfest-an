@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/activity_key_sorting_layout_padding_top">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="@string/create_key.text.subheader"
+                android:id="@+id/keySortingBody"
+                style="@style/AppTheme.TextWhite"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_key_sorting_body_text_margin_bottom"
+                android:layout_marginLeft="@dimen/activity_key_sorting_body_text_margin_left"
+                android:layout_marginRight="@dimen/activity_key_sorting_body_text_margin_right" />
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/completedKeysRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </android.support.v7.widget.RecyclerView>
+
+            <Button
+                android:id="@+id/submitButton"
+                style="@style/AppTheme.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/create_key.button.submit"
+                android:layout_marginTop="@dimen/activity_key_sorting_submit_button_margin_top"
+                android:layout_marginBottom="@dimen/activity_key_sorting_submit_button_margin_bottom"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
