@@ -1,4 +1,9 @@
 # DevFest 2017 Android Application
+
+README documentation is in progress!!!
+
+* app/google-services.json
+
 ## Some tutorials and documentation
 * [Riga DevFest Android](https://github.com/RigaDevDay/rdd-android)
 * [Firebase Auth UI Lib](https://github.com/firebase/FirebaseUI-Android/tree/master/auth)
@@ -21,6 +26,3 @@
 * RxFirebase
 * RxJava
 * RxAndroid
-
-
-* app/google-services.json
