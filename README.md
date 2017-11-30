@@ -2,7 +2,7 @@
 
 README documentation is in progress!!!
 
-* app/google-services.json
+* To compile correctly add google-services.json from your Firebase project to /app folder.
 
 ## Some tutorials and documentation
 * [Riga DevFest Android](https://github.com/RigaDevDay/rdd-android)
